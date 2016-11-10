@@ -1,7 +1,7 @@
 fileFormatVersion: 2
-guid: 1e6d1824982753f4ab79ce9898c384ef
-timeCreated: 1478765014
-licenseType: Pro
+guid: 75e8f49e48c6b344db0d1978910f75da
+timeCreated: 1478791385
+licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
   serializedVersion: 2
@@ -41,16 +41,14 @@ TextureImporter:
   spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 6
-  spritePivot: {x: 0, y: 0}
-  spriteBorder: {x: 10, y: 10, z: 10, w: 10}
+  alignment: 7
+  spritePivot: {x: 0.5, y: 0}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
-  spriteTessellationDetail: -1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    serializedVersion: 2
     sprites: []
     outline: []
   spritePackingTag: 

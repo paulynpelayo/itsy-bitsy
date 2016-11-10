@@ -3,16 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using itsybitsy.Utilities;
 
-namespace itsybitsy
+[System.Serializable]
+public enum Difficulty
 {
-    [System.Serializable]
-    public enum Difficulty
-    {
-        EASY,
-        MEDIUM,
-        HARD
-    }
-    
+    EASY,
+    MEDIUM,
+    HARD
+}
+
+namespace itsybitsy
+{    
     public class LevelGenerator : MonoBehaviour
     {
         /* DYNAMIC LEVEL GENERATOR */
@@ -37,7 +37,13 @@ namespace itsybitsy
         // Use this for initialization
         public virtual void Start()
         {
-            if (string.IsNullOrEmpty(input)) return;         
+			if (UIManager.instance != null) {
+				input = UIManager.instance.Seed.text;
+				difficulty = UIManager.instance.GetDifficulty ();
+			}
+            if (string.IsNullOrEmpty(input)) return; 
+
+
             ParseData(PrepareParseData());
         }
 

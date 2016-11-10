@@ -132,7 +132,7 @@ namespace itsybitsy.Utilities
         /// </summary>
         /// <param name="bytes"></param>
         /// <returns></returns>
-        public static BitArray[] GetBitArray(byte[] bytes)
+        public static BitArray[] GetBitArray(byte[] bytes, bool readLeftToRight = true)
         {
             BitArray[] bits = new BitArray[bytes.Length];
 
@@ -141,7 +141,9 @@ namespace itsybitsy.Utilities
                 byte[] newByte = new byte[1];
                 newByte[0] = bytes[x];
                 BitArray bit = new BitArray(newByte);
-                bits[x] = bit;
+
+                if (readLeftToRight) bits[x] = ReverseBits(bit);
+                else bits[x] = bit;
             }
                         
             return bits;
